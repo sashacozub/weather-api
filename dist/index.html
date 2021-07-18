@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title>Screensaver</title>
+</head>
+<body class="flex">
+    <main class="container flex">
+        <div class="head flex">
+            <div class="location-box backdrop">
+                <h1 id="location">Oslo, NO</h1>
+                <h3 id="current-date">Month, day</h3>
+            </div>
+            
+            <div class="weather-info flex backdrop">
+                <div class="main-info flex">
+                    <img id="icon" src="" alt="">
+                    <h2 id="temperature">--</h2>
+                </div>
+                <div class="extra-info">
+                    <h3 id="description">description</h3>
+                    <h3 id="feels-like">--</h3>     
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="clock-container flex backdrop">
+                <div class="time-box">
+                    <h1 class="time hours">00</h1>
+                </div>
+                <h1 class="time">:</h1>
+                <div class="time-box">
+                    <h1 class="time minutes">00</h1>
+                </div>
+                <h1 class="time">:</h1>
+                <div class="time-box">
+                    <h1 class="time seconds">00</h1>
+                </div>
+            </div>
+        </div>
+
+        <form class="search flex">
+            <input class="location-search" type="text" name="location">
+            <button class="location-submit" type="submit">&#62;</button>
+        </form>
+    </main>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

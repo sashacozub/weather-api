@@ -1,0 +1,167 @@
+// Global styles.
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 10px rgb(61, 61, 61);
+    padding: 2% 3%;
+    border-radius: 10px;
+}
+
+// Main container.
+.container {
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    padding: 2% 5% 5%;
+    background: lightblue;
+    background-size: cover;
+}
+
+.extra-info {
+    text-align: end;
+    width: 100%;
+}
+
+// Container for location name and weather info.
+.head {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 50px;
+
+    .location-box {
+        #current-date {
+            margin-left: 5%;
+        }
+    }
+
+    .weather-info {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 50px;
+
+        #description {
+            text-transform: capitalize;
+        }
+        
+        #temperature::after {
+            content: '°C';
+        }
+        
+        #feels-like::before {
+            content: 'Feels like: ';
+        }
+        
+        #feels-like::after {
+            content: '°C';
+        }
+    }
+}
+
+// Boxes for hours, minutes and seconds inside clock container.
+.clock-container {
+    padding: 0 50px;
+    margin-bottom: 50px;
+
+    .time-box {
+        width: auto;
+        text-align: center;
+    
+        .time {
+            font-size: 7rem;
+            font-weight: 100;
+            width: 160px;
+        }
+    }
+}
+
+// Search-box container.
+.search {
+    position: relative;
+    width: 500px;
+    height: 30px;
+
+    .location-search {
+        width: 500px;
+        height: 36px;
+        padding: 0 20px;
+        text-align: center;
+        border: 2px solid rgba(184, 184, 184, 0.5);
+        border-radius: 18px;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        font-size: 1.1rem;
+        transition: all 300ms ease;
+
+        &:focus {
+            border: 2px solid rgb(67, 182, 63);
+        }
+    }
+
+    .location-submit {
+        position: absolute;
+        top: 0;
+        right: 4px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid rgba(184, 184, 184, 0.9);
+        color: rgba(184, 184, 184, 1);
+        background-color: white;
+        transition: all 300ms ease;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid rgb(67, 182, 63);
+        }
+
+        &:active {
+            background-color: rgb(67, 182, 63);
+            color: white;
+        }
+    }
+}
+
+
+@import 'mobile';
