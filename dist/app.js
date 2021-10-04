@@ -15,8 +15,8 @@ const seconds = document.querySelector('.seconds');
 const form = document.querySelector('.search');
 const searchBox = document.querySelector('.location-search');
 
-const weatherKey = '5941335236ad35573bfd770dfe6cb4a8';
-const timeKey = 'AIzaSyCEGPpBNXMzO8eDeOi4CEPwzRsnSp6iUNM';
+const weatherKey = '';
+const timeKey = '';
 
 // Initial data to show weather and time in Oslo, Norway
 let rawOffset = 3600;
